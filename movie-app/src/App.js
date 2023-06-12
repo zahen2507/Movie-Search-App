@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  const search = (q) => {
+    console.log(q);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <h1>Zahen Wafera</h1>
+       <div className="movie-search">
+        <input 
+          type="text" 
+          placeholder="Cari Film Kesayanganmu"
+          onChange={ (target) => search(target.value)}
+          />
+       </div>
+       <div className="movie-container">
+        <div className="movie-wrapper">
+          <div className="movie-title"></div>
+          <img className="movie-img" src="" />
+          <div className="movie-date">12-06-2022</div>
+          <div className="movie-rate">9.2</div>
+        </div>
+       </div>
       </header>
     </div>
-  );
-}
+  )
+};
 
 export default App;
